@@ -12,6 +12,9 @@ target 'RN_push_notif_local' do
     :hermes_enabled => true
   )
 
+  pod 'React-RCTText', :path => '../node_modules/react-native/Libraries/Text', :modular_headers => true
+
+
   target 'RN_push_notif_localTests' do
     inherit! :complete
     # Pods for testing

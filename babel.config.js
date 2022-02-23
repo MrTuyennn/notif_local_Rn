@@ -19,7 +19,7 @@ module.exports = {
           '@navigation': './src/navigation',
           '@screens': './src/screens',
           '@store': './src/store',
-          '@theme': './src/themes',
+          '@themes': './src/themes',
           '@utils': './src/utils',
         },
       },
