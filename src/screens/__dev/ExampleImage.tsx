@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, {useCallback, useEffect, useState} from 'react';
 import {Dimensions, FlatList, StyleSheet} from 'react-native';
-import { Block, Image } from '../base';
+import { Block, Image } from '../../components/base';
 
 const IMAGE_SIZE = Dimensions.get('window').width / 4;
 

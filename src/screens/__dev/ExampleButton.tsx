@@ -1,8 +1,8 @@
 import React from 'react';
 import {ScrollView} from 'react-native';
-import Block from '../base/Block';
-import Button from '../base/Button';
-import Text from '../base/Text';
+import Block from '../../components/base/Block';
+import Button from '../../components/base/Button';
+import Text from '../../components/base/Text';
 
 const ExampleButton = () => {
   const _renderChild = (title: string, Component: any) => {

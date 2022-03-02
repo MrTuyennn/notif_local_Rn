@@ -1,42 +1,25 @@
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {StyleSheet,LogBox} from 'react-native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import Block from './components/base/Block';
-import Text from './components/base/Text';
+import {navigationRef} from './navigation/NavigationServices';
+import ExampleScreen from './screens/__dev/ExampleScreen';
+import ExampleSwitch from './screens/__dev/ExampleSwitch';
 import {useTheme} from './themes';
-import TextInput from './components/base/TextInput';
 
 type Props = {};
+LogBox.ignoreLogs([
+  "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!",
+]);
 
 const App = (props: Props) => {
-  const {Colors} = useTheme();
+  const {NavigationTheme} = useTheme();
   return (
-    <SafeAreaProvider>
-      <Block flex row>
-        <Block justify="center" flex backgroundColor={Colors.lightBlue}>
-          <Text fontType="bold" center size={20}>
-            Tuyen
-          </Text>
-        </Block>
-        <Block flex backgroundColor={Colors.veryLightPink} />
-      </Block>
-      {/* <Block
-        flex
-        align="center"
-        justify="center"
-        backgroundColor={Colors.error}> */}
-      <Block margin={{bottom: 16}}>
-        <TextInput
-          onChangeText={e => console.log(e)}
-          showError
-          error="lỗi"
-          label="Input with left icon"
-          placeholder="Place your Text"
-          leftIcon={{type: 'octicons', name: 'home'}}
-        />
-      </Block>
-      {/* </Block> */}
-    </SafeAreaProvider>
+    <NavigationContainer ref={navigationRef} theme={NavigationTheme}>
+      <SafeAreaProvider>
+        <ExampleSwitch />
+      </SafeAreaProvider>
+    </NavigationContainer>
   );
 };
 

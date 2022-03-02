@@ -1,5 +1,5 @@
 import React from 'react';
-import { Block, Text } from '../base';
+import { Block, Text } from '../../components/base';
 
 const ExampleText = () => {
   return (

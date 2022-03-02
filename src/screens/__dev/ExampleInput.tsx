@@ -1,6 +1,6 @@
 import React from 'react';
 import {ScrollView} from 'react-native';
-import { Block, Text, TextInput } from '../base';
+import { Block, Text, TextInput } from '../../components/base';
 
 const ExampleInput = () => {
   return (

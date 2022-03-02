@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import { useTheme } from '../../themes';
-import { Block, IconComponent, Text } from '../base';
+import { Block, IconComponent, Text } from '../../components/base';
 
 const ExampleIcon = () => {
   const {Colors} = useTheme();
